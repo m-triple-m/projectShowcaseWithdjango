@@ -1,0 +1,10 @@
+{% extends 'projectmanager/base.html' %}
+{% load static %}
+
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button class="border p-4 rounded">Submit</button>
+  </form>
+{% endblock %}
