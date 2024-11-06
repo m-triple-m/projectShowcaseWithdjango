@@ -1,5 +1,5 @@
-
 {% load static tailwind_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +10,8 @@
     {% endblock %}
     {% tailwind_css %}
   </head>
-  <body>
+  <body class="bg-[#111827]">
+    {% include 'projectmanager/navbar.html' %}
     {% block content %}
 
     {% endblock %}

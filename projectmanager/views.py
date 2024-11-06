@@ -18,3 +18,9 @@ def listProjects(request):
     projectList = Project.objects.all()
     context = {'projectList': projectList}
     return render(request, 'projectmanager/browse_project.html', context)
+
+
+def projectDetails(request, id):
+    project = Project.objects.get(id=id)
+    context = {'projectDetails': project}
+    return render(request, 'projectmanager/project_details.html', context)
