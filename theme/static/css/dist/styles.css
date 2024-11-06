@@ -883,6 +883,11 @@ select {
   margin-bottom: 2rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1129,6 +1134,10 @@ select {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .flex-shrink-0 {
@@ -1455,6 +1464,10 @@ select {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-3 {

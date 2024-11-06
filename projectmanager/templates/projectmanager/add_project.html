@@ -2,9 +2,15 @@
 {% load static %}
 
 {% block content %}
-  <form action="" method="POST" enctype= "multipart/form-data">
-    {% csrf_token %}
-    {{ form }}
-    <button class="border p-4 rounded">Submit</button>
-  </form>
+  <div class="container mx-auto pt-20 dark:text-white">
+    <h1 class="text-4xl text-center font-bold">Add New Project</h1>
+    <div class="max-w-4xl mx-auto my-5 rounded dark:bg-gray-800 p-10 rounded-lg">
+
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button class="border p-4 rounded">Submit</button>
+      </form>
+    </div>
+  </div>
 {% endblock %}
