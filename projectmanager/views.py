@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ProjectForm
+from .models import Project
 
 # Create your views here.
 def addProject(request):
@@ -12,3 +13,8 @@ def addProject(request):
             
     context = {'form': form}
     return render(request, 'projectmanager/add_project.html', context)
+
+def listProjects(request):
+    projectList = Project.objects.all()
+    context = {'projectList': projectList}
+    return render(request, 'projectmanager/browse_project.html', context)
