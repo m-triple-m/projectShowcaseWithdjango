@@ -41,6 +41,7 @@ module.exports = {
          */
         // '../../**/*.py'
     ],
+    darkMode: 'selector', // or 'media' or 'class'
     theme: {
         extend: {},
     },
