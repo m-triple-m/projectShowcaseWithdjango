@@ -15,7 +15,13 @@ def addProject(request):
     return render(request, 'projectmanager/add_project.html', context)
 
 def listProjects(request):
-    projectList = Project.objects.all()
+    q = request.GET.get('q', None)
+    print(q)
+    projectList = None
+    if q:
+        projectList = Project.objects.filter(title__icontains=q)
+    else    :
+        projectList = Project.objects.all()
     context = {'projectList': projectList}
     return render(request, 'projectmanager/browse_project.html', context)
 
