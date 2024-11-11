@@ -8,6 +8,7 @@ class Project(models.Model):
     department = models.CharField(max_length=50, default='IT')
     technology = models.CharField(max_length=20)
     image = models.ImageField(upload_to='project_images/')
+    video = models.FileField(upload_to='project_videos/', default='project_videos/default.mp4')
     student_name = models.CharField(max_length=100, default='Anonymous')
     student_github = models.URLField(max_length=200, default='')
     student_linkedin = models.URLField(max_length=200, default='')

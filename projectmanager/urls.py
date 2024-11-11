@@ -8,6 +8,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='projectmanager/index.html')),
     path('add_project/', views.addProject, name='add-product' ),
     path('browse/', views.listProjects, name='browse' ),
+    path('browse_dept/', TemplateView.as_view(template_name='projectmanager/browse_dept.html' )),
     path('project-details/<int:id>/', views.projectDetails, name='project-details' ),
 ]
 

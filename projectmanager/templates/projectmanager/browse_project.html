@@ -107,6 +107,11 @@
   </div>
   <!-- End Hero -->
   <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
+    
+    {% comment %} {% if request.GET.get('q', None) %}
+        <p>Showing results for department '{{request.GET.get("department")}}'</p>
+    {% endif %} {% endcomment %}
+      
     <div class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
       {% for project in projectList %}
         <!-- Card -->

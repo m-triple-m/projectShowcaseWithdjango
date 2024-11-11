@@ -17,12 +17,15 @@ def addProject(request):
 def listProjects(request):
     q = request.GET.get('q', None)
     technology = request.GET.get('technology', None)
+    department = request.GET.get('department', None)
     projectList = Project.objects.all()
-    print(technology)
+    # print(technology)
     if q:
         projectList = projectList.filter(title__icontains=q)
     if technology:
         projectList = projectList.filter(technology=technology)
+    if  department:
+        projectList = projectList.filter(department=department)
     context = {'projectList': projectList, 'q' : q}
     return render(request, 'projectmanager/browse_project.html', context)
 
