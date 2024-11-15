@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ProjectForm
 from .models import Project
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 def addProject(request):
@@ -34,3 +35,6 @@ def projectDetails(request, id):
     project = Project.objects.get(id=id)
     context = {'projectDetails': project}
     return render(request, 'projectmanager/project_details.html', context)
+
+def login(request, id):
+    return render(request, 'registration/login.html')
